@@ -13,7 +13,7 @@
 [![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com)
 [![Linux](https://svgshare.com/i/Zhy.svg)](https://svgshare.com/i/Zhy.svg)
 <a href="https://github.com/alt3kx/wafaray/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-GNU%20General%20v3.0-orange"></a>
-<a href="https://github.com/alt3kx/wafaray/releases"> <img src="https://img.shields.io/badge/Version-v1.1%20(stable)-blue.svg"></a>
+<a href="https://github.com/alt3kx/wafaray/releases"> <img src="https://img.shields.io/badge/Version-v1.0%20(stable)-blue.svg"></a>
   
 ## Purpose 
 In essence, the main idea came to use WAF + YARA (YARA right-to-left = ARAY) to detect malicious files at the WAF level before WAF can forward them to the backend e.g. files uploaded through web functions see: https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload
