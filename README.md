@@ -6,7 +6,7 @@
 </a>
 </h1>
 
-#### WAFARAY is a LAB deployment based on Debian 11.3.0 (stable) x64 made and cooked between two main ingredients WAF + YARA to detect malicious files (*e.g. webshells, virus, malware, binaries*) typically trough web functions (upload files).
+#### WAFARAY is a LAB deployment based on Debian 11.3.0 (stable) x64 made and cooked between two main ingredients WAF + YARA to detect malicious files (*e.g. webshells, virus, malware, binaries*) typically through web functions (upload files).
 
 [![made-with-python](https://img.shields.io/badge/Python-3.x/2.x-green.svg)](https://docs.python.org/3/download.html)
 [![made-with-bash](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg)](https://www.gnu.org/software/bash/)
@@ -23,7 +23,7 @@ When a web page allows uploading files, most of the WAFs are not inspecting file
 ### Do malware detection through WAF?
 Yes, one solution is to use ModSecurity + Clamav, most of the pages call ClamAV as a process and not as a daemon, in this case, analysing a file could take more than 50 seconds per file. See this resource: https://kifarunix.com/intercept-malicious-file-upload-with-modsecurity-and-clamav/ 
 
-### Do malware detection trough WAF + YARA?
+### Do malware detection through WAF + YARA?
 :-( A few clues here [Black Hat Asia 2019](https://portswigger.net/daily-swig/waf-reloaded-modsecurity-3-1-showcased-at-black-hat-asia) please continue reading and see below our quick LAB deployment.
 
 ## WAFARAY: how does it work ?
@@ -49,14 +49,14 @@ Basically, It is a quick deployment **(1)** with pre-compiled and ready-to-use Y
 * Temporal Files: `/temporal` </br>
 
 ### Approach
-* `Blueteamers`: Rule enforcement, best alerting, malware detection on files uploaded trough web functions.
+* `Blueteamers`: Rule enforcement, best alerting, malware detection on files uploaded through web functions.
 * `Redteamers/pentesters`: GreyBox scope , upload and bypass with a malicious file, rule enforcement.
 * `Security Officers`: Keep alerting, threat hunting.
 * `SOC`: Best monitoring about malicious files.
 * `CERT`: Malware Analysis, Determine new IOC.
 
 ## Building Detection Lab
-The Proof of Concept is based on Debian 11.3.0 (stable) x64 OS system, OWASP CRC v3.3.2 and Yara 4.0.5, you will find the automation scripts here `wafaray_install.sh` and manual installation as optional can be found here: `manual_instructions.txt` also has been created a PHP page as "mock" to observe the interaction and detection of malicious files using WAF + YARA.
+The Proof of Concept is based on Debian 11.3.0 (stable) x64 OS system, OWASP CRC v3.3.2 and Yara 4.0.5, you will find the automatic installation script here `wafaray_install.sh` and an optional manual installation guide can be found here: `manual_instructions.txt` also a PHP page has been created as a "mock" to observe the interaction and detection of malicious files using WAF + YARA.
 
 ### Installation *(recommended)* with shell scripts
 :heavy_check_mark: Step 1: Download Debian 11.3.0: https://cdimage.debian.org/debian-cd/current/amd64/iso-dvd/debian-11.3.0-amd64-DVD-1.iso </br>
@@ -103,7 +103,7 @@ the approver script "/YaraRules/YaraScripts/modsec_yara.py": 0 SUSPECTED [YaraSi
 [msg "Suspected File Upload:eicar.com.txt -> /temporal/20220812-184146-YvbXKilOKdNkDfySME10ywAAAAA-file-Wx1hQA - URI: /upload.php"]
 ```
 
-## Tasting WAFARAY... voilà... 
+## Testing WAFARAY... voilà... 
 
 ### Stop / Start ModSecurity
 ```
